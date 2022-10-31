@@ -8,9 +8,9 @@ export default function useResize() {
   const handleResize = useCallback(() => {
     setWindowWidth(window.innerWidth);
     if (window) {
-      if (windowWidth < resizeThreshold) {
+      if (windowWidth! < resizeThreshold) {
         setIsDesktopScreen(false);
-      } else if (windowWidth >= resizeThreshold) {
+      } else if (windowWidth! >= resizeThreshold) {
         setIsDesktopScreen(true);
       }
     }
